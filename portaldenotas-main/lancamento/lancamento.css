@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f3f5;
+    color: #333;
+}
+
+header {
+    background-color: #107c41;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.form-grupo {
+    max-width: 300px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+}
+
+.tabela-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th, td {
+    border: 1px solid #bbb;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f3f3f3;
+    font-weight: 600;
+    color: #444;
+}
+
+td input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 15px;
+    background: transparent;
+}
+
+td input[type="text"] {
+    text-align: left;
+}
+
+td input[type="number"] {
+    text-align: center;
+}
+
+td input:focus {
+    background-color: #e2f0d9;
+}
+
+.acoes-planilha {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.btn-adicionar {
+    background-color: #fff;
+    color: #107c41;
+    border: 2px solid #107c41;
+}
+
+.btn-adicionar:hover {
+    background-color: #e2f0d9;
+}
+
+.btn-salvar {
+    background-color: #107c41;
+    flex-grow: 1;
+}
+
+.btn-salvar:hover {
+    background-color: #0b5930;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Aluno - Histórico Escolar</title>
+    <link rel="stylesheet" href="historico.css">
+</head>
+<body>
+
+    <header style="background-color: #2b579a;">
+        <h1>Histórico de Notas Publicadas</h1>
+        <p>Consulta de registros salvos no Portal Escolar</p>
+        <nav style="margin-top: 15px;">
+            <a href="/lancamento/lancamento.html" style="color: white; font-weight: bold; text-decoration: none; border: 1px solid white; padding: 5px 10px; border-radius: 4px;">⬅ Voltar para Lançamento</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h2>Registros Oficiais do Portal</h2>
+                <button onclick="limparBancoDados()" style="background-color: #a80000; width: auto; font-size: 14px; padding: 8px 15px;">Limpar Registros do Portal</button>
+            </div>
+            <div class="tabela-container">
+                <table id="tabelaHistorico">
+                    <thead>
+                        <tr>
+                            <th>Nome do Aluno</th>
+                            <th>Tipo de Período</th>
+                            <th>Notas Lançadas</th>
+                            <th>Média Final</th>
+                            <th>Situação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoHistorico">
+                    </tbody>
+                </table>
+                <div id="mensagemVazia" style="text-align: center; padding: 20px; color: #777;">
+                    Nenhum dado encontrado no Portal Escolar.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="historico.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', carregarDadosNoHistorial);
+    </script>
+</body>
+</html>

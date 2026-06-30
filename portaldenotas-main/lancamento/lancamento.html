@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Professor - Planilha de Lançamento</title>
+    <link rel="stylesheet" href="lancamento.css">
+</head>
+<body>
+
+    <header>
+        <h1>Painel do Professor</h1>
+        <p>Lançamento de notas em formato de planilha</p>
+        <nav style="margin-top: 15px;">
+            <a href="/historico/historico.html" style="color: white; font-weight: bold; text-decoration: none; border: 1px solid white; padding: 5px 10px; border-radius: 4px;">Ver Histórico Publicado ➔</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Configuração do Período</h2>
+            <div class="form-grupo">
+                <label>Selecione a estrutura letiva:</label>
+                <select id="tipoPeriodo" onchange="atualizarEstruturaTabela()">
+                    <option value="2">Bimestre (2 Notas)</option>
+                    <option value="3">Trimestre (3 Notas)</option>
+                    <option value="4">Quadrimestre (4 Notas)</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Planilha de Notas (Média Mínima: 70)</h2>
+            <div class="tabela-container">
+                <table id="tabelaNotas">
+                    <thead>
+                        <tr id="cabecalhoTabela">
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabela">
+                    </tbody>
+                </table>
+            </div>
+            <div class="acoes-planilha">
+                <button type="button" onclick="adicionarLinha()" class="btn-adicionar">+ Adicionar Aluno</button>
+                <button type="button" onclick="salvarNoBanco()" class="btn-salvar">Publicar Notas no Portal Escolar</button>
+            </div>
+            <div id="statusSalvamento" style="margin-top: 15px; text-align: center; font-weight: bold;"></div>
+        </section>
+    </main>
+
+    <script src="lancamento.js"></script>
+</body>
+</html>
